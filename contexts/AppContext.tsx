@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { PropsWithChildren, createContext, useState } from "react";
 import { GeolocationResponse } from "../types/GeolocationReponse";
 import { AppContextType } from "../types/AppContextType";
 import { WeekWeatherType } from "../types/WeekWeatherType";
@@ -29,7 +29,7 @@ const initialState: AppContextType = {
 
 export const AppContext = createContext<AppContextType>(initialState);
 
-export const AppProvider = ({ children }: any) => {
+export const AppProvider = ({ children }: PropsWithChildren) => {
 	const [selectedCity, setSelectedCity] = useState<GeolocationResponse>();
 	const [searchInput, setSearchInput] = useState<string>("");
 	const [suggestions, setSuggestions] = useState<GeolocationResponse[]>([]);
