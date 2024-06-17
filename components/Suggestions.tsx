@@ -39,11 +39,9 @@ const SuggestionsComponent = () => {
 									style={styles.citySuggestion}
 								>
 									<Text>
-										{city.name}
-										{city.admin1 || city.country ? ", " : null}
-										{city.admin1}
-										{city.admin1 && city.country ? ", " : null}
-										{city.country}
+										<Text style={styles.boldText}>{city.name}, </Text>
+										<Text>{city.admin1}, </Text>
+										<Text>{city.country}</Text>
 									</Text>
 								</TouchableOpacity>
 							);
@@ -88,6 +86,7 @@ const styles = StyleSheet.create({
 		borderStyle: "solid",
 		backgroundColor: "#e8eced",
 	},
+	boldText: { fontWeight: "900" },
 });
 
 export default SuggestionsComponent;
