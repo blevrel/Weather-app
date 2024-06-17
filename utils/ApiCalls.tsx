@@ -17,7 +17,7 @@ export async function getWeekWeather(city: GeolocationResponse) {
 }
 
 export async function getCitiesByName(input: string) {
-	const url: string = `https://geocoding-api.open-meteo.com/v1/search?name=${input}`;
+	const url: string = `https://geocoding-api.open-meteo.com/v1/search?name=${input}&count=5`;
 	const response: { results: GeolocationResponse[] } = await (
 		await fetch(url)
 	).json();
