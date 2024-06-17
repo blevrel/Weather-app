@@ -28,7 +28,6 @@ const GeolocationComponent: React.FC<{}> = () => {
 const styles = StyleSheet.create({
 	container: {
 		padding: 17,
-		backgroundColor: "white",
 	},
 	disabled: {
 		opacity: 0.2,

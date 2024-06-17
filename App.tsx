@@ -14,6 +14,7 @@ const weather_proj: () => React.JSX.Element = () => {
 				<View style={styles.topbar}>
 					<SearchbarComponent></SearchbarComponent>
 					<SearchIconComponent></SearchIconComponent>
+					<View style={styles.separationBar}></View>
 					<GeolocationComponent></GeolocationComponent>
 				</View>
 				<TabNavigationContainer />
@@ -26,6 +27,7 @@ const weather_proj: () => React.JSX.Element = () => {
 const styles = StyleSheet.create({
 	container: { flex: 1 },
 	topbar: { flexDirection: "row", paddingTop: 30, alignItems: "center" },
+	separationBar: { height: 40, width: 1, backgroundColor: "black" },
 });
 
 export default weather_proj;
