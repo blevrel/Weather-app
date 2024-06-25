@@ -62,7 +62,12 @@ const styles = StyleSheet.create({
 		textAlign: "center",
 		padding: 10,
 	},
-	title: { fontSize: 30, fontWeight: "bold", textAlign: "center" },
+	title: {
+		fontSize: 30,
+		fontWeight: "bold",
+		textAlign: "center",
+		color: "purple",
+	},
 	text: { fontSize: 20, textAlign: "center" },
 });
 

@@ -31,6 +31,7 @@ const SearchbarComponent = () => {
 			value={appContext.searchInput}
 			containerStyle={{
 				flex: 20,
+				backgroundColor: "#ecdaef",
 			}}
 		/>
 	);

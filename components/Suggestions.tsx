@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 		right: 0,
 		bottom: 0,
 		left: 0,
-		backgroundColor: "white",
+		backgroundColor: "#ecdaef",
 	},
 	loadingContainer: {
 		display: "flex",
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
 		right: 0,
 		bottom: 0,
 		left: 0,
-		backgroundColor: "white",
+		backgroundColor: "#ecdaef",
 		flex: 1,
 	},
 	citySuggestion: {

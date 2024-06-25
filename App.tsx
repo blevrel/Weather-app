@@ -26,7 +26,12 @@ const weather_proj: () => React.JSX.Element = () => {
 
 const styles = StyleSheet.create({
 	container: { flex: 1 },
-	topbar: { flexDirection: "row", paddingTop: 30, alignItems: "center" },
+	topbar: {
+		flexDirection: "row",
+		paddingTop: 30,
+		alignItems: "center",
+		backgroundColor: "#ecdaef",
+	},
 	separationBar: { height: 40, width: 1, backgroundColor: "black" },
 });
 
