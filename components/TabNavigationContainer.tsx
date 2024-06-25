@@ -27,8 +27,13 @@ const TabNavigationContainer = () => {
 					initialRouteName={LabelEnum.CURRENT}
 					tabBarPosition="bottom"
 					screenOptions={{
-						tabBarActiveTintColor: "blue",
-						tabBarInactiveTintColor: "grey",
+						tabBarStyle: {
+							backgroundColor: "transparent",
+							elevation: 0,
+						},
+						tabBarActiveTintColor: "purple",
+						tabBarIndicatorStyle: { backgroundColor: "purple" },
+						tabBarInactiveTintColor: "black",
 						tabBarLabelStyle: { fontSize: 12 },
 						tabBarIconStyle: { alignItems: "center", justifyContent: "center" },
 						tabBarAndroidRipple: { radius: 0 },
