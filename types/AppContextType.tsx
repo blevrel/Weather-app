@@ -7,7 +7,9 @@ export type AppContextType = {
 	searchInput: string;
 	setSearchInput: React.Dispatch<React.SetStateAction<string>>;
 	suggestions: GeolocationResponse[];
-	setSuggestions: React.Dispatch<React.SetStateAction<GeolocationResponse[]>>;
+	setSuggestions: React.Dispatch<
+		React.SetStateAction<GeolocationResponse[] | undefined>
+	>;
 	todayWeather: TodayWeatherType | undefined;
 	setTodayWeather: React.Dispatch<
 		React.SetStateAction<TodayWeatherType | undefined>

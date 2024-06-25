@@ -15,26 +15,33 @@ const ScreenTemplate: React.FC<{ label: LabelEnum }> = ({ label }) => {
 			<ScrollView
 				keyboardDismissMode="on-drag"
 				contentContainerStyle={{
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "space-evenly",
 					flexGrow: 1,
+					marginTop: 10,
+					marginBottom: 10
 				}}
 			>
 				{selectedCity && !appContext.connectionFailed ? (
-					<View style={styles.cityContainer}>
+					<View>
 						<Text style={styles.title}>{selectedCity.name}</Text>
 						<Text style={styles.text}>{selectedCity.admin1}</Text>
 						<Text style={styles.text}>{selectedCity.country}</Text>
 					</View>
 				) : null}
-				<View style={styles.weatherData}>
-					{appContext.method === "geolocation" && !appContext.permission ? (
-						<Text style={styles.errorMessage}>
-							You have not given permission for geolocation. Go to your app
-							settings to enable it
-						</Text>
-					) : (
-						selectView(label, appContext.connectionFailed)
-					)}
-				</View>
+				{
+					<View style={styles.weatherData}>
+						{appContext.method === "geolocation" && !appContext.permission ? (
+							<Text style={styles.errorMessage}>
+								You have not given permission for geolocation. Go to your app
+								settings to enable it
+							</Text>
+						) : (
+							selectView(label, appContext.connectionFailed)
+						)}
+					</View>
+				}
 			</ScrollView>
 		</SafeAreaView>
 	);
@@ -42,23 +49,17 @@ const ScreenTemplate: React.FC<{ label: LabelEnum }> = ({ label }) => {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-	},
-	cityContainer: {
-		marginTop: 10,
-		marginBottom: 0,
+		flexGrow: 1,
 	},
 	weatherData: {
-		flex: 1,
 		padding: 10,
 		justifyContent: "center",
 		alignItems: "center",
 	},
 	errorMessage: {
 		fontSize: 20,
-		color: "red",
+		color: "purple",
+		fontWeight: "bold",
 		textAlign: "center",
 		padding: 10,
 	},
