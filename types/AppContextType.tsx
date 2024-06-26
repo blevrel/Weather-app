@@ -6,7 +6,7 @@ import { WeekWeatherType } from "./WeekWeatherType";
 export type AppContextType = {
 	searchInput: string;
 	setSearchInput: React.Dispatch<React.SetStateAction<string>>;
-	suggestions: GeolocationResponse[];
+	suggestions: GeolocationResponse[] | undefined;
 	setSuggestions: React.Dispatch<
 		React.SetStateAction<GeolocationResponse[] | undefined>
 	>;

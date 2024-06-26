@@ -32,7 +32,9 @@ export const AppContext = createContext<AppContextType>(initialState);
 export const AppProvider = ({ children }: PropsWithChildren) => {
 	const [selectedCity, setSelectedCity] = useState<GeolocationResponse>();
 	const [searchInput, setSearchInput] = useState<string>("");
-	const [suggestions, setSuggestions] = useState<GeolocationResponse[]>([]);
+	const [suggestions, setSuggestions] = useState<
+		GeolocationResponse[] | undefined
+	>([]);
 	const [todayWeather, setTodayWeather] = useState<TodayWeatherType>();
 	const [weekWeather, setWeekWeather] = useState<WeekWeatherType>();
 	const [isWeatherLoading, setIsWeatherLoading] = useState<boolean>(false);
@@ -51,10 +53,10 @@ export const AppProvider = ({ children }: PropsWithChildren) => {
 				setSearchInput,
 				suggestions,
 				setSuggestions,
-				todayWeather: todayWeather,
-				setTodayWeather: setTodayWeather,
-				weekWeather: weekWeather,
-				setWeekWeather: setWeekWeather,
+				todayWeather,
+				setTodayWeather,
+				weekWeather,
+				setWeekWeather,
 				method,
 				setMethod,
 				selectedCity,

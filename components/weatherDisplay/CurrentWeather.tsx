@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import { AppContext } from "../../contexts/AppContext";
 import weatherDescriptions from "../../utils/WeatherDescription";
-import weatherDescriptionsIcons from "../../utils/WeatherDescriptionIcons";
 import { SvgUri } from "react-native-svg";
+import getIconUri from "../../utils/GetIconUri";
 
 const CurrentWeatherComponent: React.FC<{}> = () => {
 	const appContext = useContext(AppContext);
@@ -88,12 +88,5 @@ const styles = StyleSheet.create({
 		color: "purple",
 	},
 });
-
-const getIconUri = (code: number | undefined) => {
-	if (code != undefined) {
-		return weatherDescriptionsIcons.get(code) ?? null;
-	}
-	return null;
-};
 
 export default CurrentWeatherComponent;

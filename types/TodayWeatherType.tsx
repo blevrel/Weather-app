@@ -5,7 +5,7 @@ type CurrentWeatherType = {
 };
 
 type HourlyWeatherType = {
-	time: [string];
+	time: [string] | undefined;
 	temperature_2m: [number];
 	weather_code: [number];
 	wind_speed_10m: [number];
