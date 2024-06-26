@@ -14,6 +14,7 @@ import getIconUri from "../../utils/GetIconUri";
 
 const TodayWeatherComponent: React.FC<{}> = () => {
 	const appContext = useContext(AppContext);
+
 	if (appContext.method === "none") {
 		return (
 			<View style={styles.container}>
